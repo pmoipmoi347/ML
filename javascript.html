@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>JavaScript Web Page</title>
+<style>
+table,th,td{
+        border: solid black 2px;
+  text-align: center;
+    }
+</style>
+</head>
+<body>
+  <script>
+  var date = new Date();
+  var d = date.getDate();
+  var m = date.getMonth()+1;
+  var y = date.getFullYear();
+  var h=date.getHours();
+  var min=date.getMinutes();
+  var s=date.getSeconds();
+
+  date =m + '/' +d + '/' + y;
+  time =h + ':' +min +':' +s;
+  document.write("<h1>"+"Date:" + date + "</h1>");
+  document.write("<h1>"+"Time:" + time + "</h1>");
+</script>
+
+      <h2>Assignments Reminder</h2>
+<script>
+var topics = ["Create a Set of Cascading Style Sheet (CSS) Web Pages", "Create a CSS-styled Table Page", "Create an HTML5/CSS3 Compliant Home Page", "Modify Home Page to Use DIVs", "Create an Advanced CSS Web Page", "Create an HTML5 Form Page",
+    "Create a Multimedia Web Site", "Create a JavaScript Web Page", "Use JavaScript to Validate Your Web Form", "Create a Final Wow Me! Web Site"];
+var deadline = [ "02/25/2018" , "03/04/2018" , "03/11/2018" , "03/18/2018" , "04/01/2018" , "04/09/2018" , "04/15/2018" , "04/23/2018" , "04/30/2018" , "05/07/2018"];
+var today = new Date();
+var date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+for (i = 0; i < topics.length; i++) {
+    var date_date = new Date(date);
+    var date_deadline = new Date(deadline[i]);
+    var diff = Math.abs(date_date.getTime() - date_deadline.getTime());
+    var diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+    if (date_date.getTime() > date_deadline.getTime()) {
+        document.write("<strong>"+ '<span class ="text">'+ topics[i] + "</span>"+ "</strong>"+ " : "+'<span class ="past">' + diffDays + "</span>"+ "<em>"+ '<span class ="text">'+ " Days past Due Date" +"</span>"+"</em>"+ "<br>");
+
+    }
+    else {
+        document.write("<strong>"+'<span class ="text">'+ topics[i]+"</span>" +"</strong>"+" : " + '<span class ="due">'+ diffDays +"</span>"+ "<em>"+'<span class ="text">'+" Days left till Due Date" +"</span>"+"</em>"+ "<br>");
+
+    }
+}
+
+</script>
+
+
+<fieldset>
+    <h1>Months of 2018</h1>
+    <table class="table">
+        <tr>
+            <th>Month Number</th>
+            <th>Month Name</th>
+            <th>Days in Month</th>
+        </tr>
+<script>
+function daysInMonth(month,year) {
+return new Date(year, month, 0).getDate();
+}
+
+var monthss = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+  for(i=1;i<monthss.length+1;i++){
+  if(i%2==0){
+  document.write('<tr style="background-color: grey"><td>'+i+'</td> <td>'+monthss[i-1]+'</td> <td>'+daysInMonth(i,2018)+'</td> </tr>');
+  }
+  else{
+  document.write('<tr><td>'+i+'</td> <td>'+monthss[i-1]+'</td> <td>'+daysInMonth(i,2018)+'</td> </tr>');
+            }
+        }
+    </script>
+
+    </table>
+
+</fieldset>
+<a href="index.html">Back to my page</a>
+</body>
+
+</html>

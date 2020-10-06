@@ -1,0 +1,36 @@
+
+
+body {
+    background-color: pink;
+}
+h1 {
+    color: blue;
+}
+h2{
+    color: red;
+    text-align: center;
+}
+h3 {
+    color: white;
+    text-align: center;
+}
+h4 {
+    color: orange;
+    text-align: center;
+}
+h5 {
+    color: cyan;
+    text-align: center;
+}
+h6 {
+    color: violet;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+    font-size: 50px;
+}
+p {
+    color: brown;
+
+}

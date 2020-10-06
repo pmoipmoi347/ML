@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> Wow ME Page</title>
+    	<link rel="stylesheet" type="text/css" href="wowmepage.css"/>
+<body>
+  <audio controls autoplay>
+      <source src="EmpireStateOfMind.mp3" type="audio/mpeg" >
+    </audio>
+
+    <div class="dropdown">
+      <button class="button">Menu
+      </button>
+  <div class="dropdown-content">
+  <a class="active" href="wowmepage.html">Home</a>
+  <a href="Boroughs.html">Boroughs of New York City</a>
+  <a href="food.html">Food</a>
+  <a href="contact.html">Feedback</a>
+  <a href="index.html">click to go back to my new page</a>
+      </div>
+    </div>
+  <script>
+  var date = new Date();
+  var d = date.getDate();
+  var m = date.getMonth()+1;
+  var y = date.getFullYear();
+  var h=date.getHours();
+  var min=date.getMinutes();
+  var s=date.getSeconds();
+  date =m + '/' +d + '/' + y;
+  time =h + ':' +min +':' +s;
+  document.write("<h1>"+"Date: " + date + "</h1>");
+  document.write("<h1>"+"Time: " + time + "</h1>");
+</script>
+<h2><span class="blink">WELCOME TO </span></h2>
+<img src="NewYork.gif" alt="NewYork" style="width:800px;height:800px;" class="img">
+
+</body>
+</html>

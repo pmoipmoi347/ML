@@ -1,0 +1,31 @@
+img.picture{
+  height: 50px;
+  width: 50px;
+  float: right;
+}
+p{
+    font-family: Verdana, serif;
+}
+table,tr,th{
+  border: none;
+}
+
+@media print{
+  img.picture{
+    display: none;
+  }
+	p{
+  font-family: "Arial", sans-serif
+  }
+
+  table,th,td{
+    border: 1px solid black;
+  }
+  ul{
+    color:green;
+  }
+  a:link {
+  color: green;
+}
+
+}
